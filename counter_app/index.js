@@ -1,13 +1,22 @@
-// document.getElementById("count").innerText = 5
+let countPeople = document.getElementById("count");
 
 // Initialize the count as 0
 let count = 0;
 
 // Listen for clicks on the increment button
 function increment() {
-    console.log("The button was clicked")
+
+    // Increment the count variable when increment button is clicked
+    count = count + 1
+
+    //change the count in the HTML to relect the new count
+    countPeople.innerText = count
+    
 }
 
-// Increment the count variable when increment button is clicked
+function save(){
+    console.log(count);
+}
 
-//change the count in the HTML to relect the bew count
+
+
