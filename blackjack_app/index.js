@@ -22,7 +22,6 @@ if (sum <= 20){
 } else if (sum === 21){
     message = "Congratulations 🥳";
     hasBlackJack = true;
-    isAlive = false;
 } else {
     message = "You're out of the game. Try again later 😢";
     isAlive = false;
