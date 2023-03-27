@@ -37,3 +37,11 @@ function startGame() {
   // CASH OUT
   messagePrompt.textContent = message;
 }
+
+function newCard(){
+    console.log("New card picked");
+    let newCard = 2;
+
+    sumCard += newCard
+    startGame();
+}
