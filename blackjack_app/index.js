@@ -7,7 +7,7 @@ let card = document.querySelector("#cards");
 
 let firstCard = Math.floor(Math.random() * (11 - 2 + 1)) + 2;
 let secondCard = Math.floor(Math.random() * (11 - 2 + 1)) + 2;
-
+let cards = [firstCard, secondCard]; //array - ordered list of items
 // Sum up the two cards
 let sumCard = firstCard + secondCard;
 
@@ -26,7 +26,10 @@ function startGame(){
 
 function renderGame() {
     sum.textContent = "Sum: " + sumCard;
-    card.textContent = "Cards: " + firstCard + " " + secondCard;
+    // render both firstCard and secondCard
+    card.textContent = "Cards: " + cards[0] + " " + cards[1];
+    // render all the cards we have
+
   //conditionals
   if (sumCard <= 20) {
     message = "Do you want to draw another card?";
