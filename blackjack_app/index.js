@@ -20,7 +20,11 @@ let isAlive = true;
 // A varaible called message and assign a string value to it
 let message = "We're logging out";
 
-function startGame() {
+function startGame(){
+    renderGame();
+}
+
+function renderGame() {
     sum.textContent = "Sum: " + sumCard;
     card.textContent = "Cards: " + firstCard + " " + secondCard;
   //conditionals
@@ -39,9 +43,8 @@ function startGame() {
 }
 
 function newCard(){
-    console.log("New card picked");
     let newCard = 2;
 
     sumCard += newCard
-    startGame();
+    renderGame();
 }
