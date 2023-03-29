@@ -5,8 +5,8 @@ let messagePrompt = document.getElementById("message-prompt");
 let sum = document.querySelector(".sum-cards");
 let card = document.querySelector("#cards");
 
-let firstCard = Math.floor(Math.random() * (11 - 2 + 1)) + 2;
-let secondCard = Math.floor(Math.random() * (11 - 2 + 1)) + 2;
+let firstCard = getRandomCard();
+let secondCard = getRandomCard();
 let cards = [firstCard, secondCard]; //array - ordered list of items
 // Sum up the two cards
 let sumCard = firstCard + secondCard;
@@ -20,15 +20,22 @@ let isAlive = true;
 // A varaible called message and assign a string value to it
 let message = "We're logging out";
 
+function getRandomCard(){
+  return 5;
+}
+
 function startGame(){
     renderGame();
 }
 
 function renderGame() {
     sum.textContent = "Sum: " + sumCard;
-    // render both firstCard and secondCard
-    card.textContent = "Cards: " + cards[0] + " " + cards[1];
+    // render cards
+    card.textContent = "Cards: ";
     // render all the cards we have
+    for(let i = 0; i < cards.length; i++){
+      card.textContent += cards[i] + " ";
+    }
 
   //conditionals
   if (sumCard <= 20) {
@@ -46,7 +53,8 @@ function renderGame() {
 }
 
 function newCard(){
-    let newCard = 2;
+    let newCard = getRandomCard();
+    cards.push(newCard);
 
     sumCard += newCard
     renderGame();
