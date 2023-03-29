@@ -20,8 +20,16 @@ let isAlive = true;
 // A varaible called message and assign a string value to it
 let message = "We're logging out";
 
+// function to get random number between 1 and 13
 function getRandomCard(){
-  return 5;
+  let randomNumber = Math.floor(Math.random() * 13) + 1;
+  if (randomNumber = 10){
+    return 10; //the value of the jack, king and queen
+  } else if (randomNumber === 1){
+    return 11;
+  } else{
+    return randomNumber;
+  }
 }
 
 function startGame(){

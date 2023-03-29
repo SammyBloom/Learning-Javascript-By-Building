@@ -24,12 +24,18 @@
 //     console.log(i);
 // }
 
-let player1Time = 102;
-let player2Time = 107;
+// let player1Time = 102;
+// let player2Time = 107;
 
-function getTotalRaceTime() {
-    return player1Time + player2Time;
+// function getTotalRaceTime() {
+//     return player1Time + player2Time;
+// }
+
+// let sumRaceTime = getTotalRaceTime()
+// console.log(sumRaceTime);
+
+function rollDice(){
+    return Math.floor(Math.random() * 6) + 1;
 }
 
-let sumRaceTime = getTotalRaceTime()
-console.log(sumRaceTime);
+console.log(rollDice());
