@@ -54,11 +54,22 @@
 // }
 
 
-let likesDocumentaries = true;
-let likeStartups = false;
-if (likesDocumentaries === true || likeStartups === false){
-    recommendMovie();
+// let likesDocumentaries = true;
+// let likeStartups = false;
+// if (likesDocumentaries === true || likeStartups === false){
+//     recommendMovie();
+// }
+// function recommendMovie(){
+//     console.log("Hey, check out this new movie...");
+// }
+
+let anbCastle = {
+    hasWifi: true,
+    name: "Trivantis Castle",
+    numberAvailable: 7,
+    power: ["solar", "nepa", " ", "backupGen"]
 }
-function recommendMovie(){
-    console.log("Hey, check out this new movie...");
-}
+
+console.log(anbCastle.name, anbCastle.power);
+
+

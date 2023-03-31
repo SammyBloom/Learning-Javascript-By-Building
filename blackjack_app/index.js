@@ -1,3 +1,7 @@
+let player = {
+  name:"Sammy",
+  funds: 145
+}
 // create two variables, firstCard and secondCard
 // Set their values to a random number between 2 and 11
 let messagePrompt = document.getElementById("message-prompt");
@@ -19,13 +23,8 @@ let isAlive = false;
 // A varaible called message and assign a string value to it
 let message = "";
 
-let player = {
-  name:"Sammy",
-  chips: 145
-}
-
-let playerName = document.getElementById("player_name");
-playerName.textContent = player.name + ": " + player.chips;
+let playerDetails = document.getElementById("player_details");
+playerDetails.textContent = player.name + ": $" + player.funds;
 
 // function to get random number between 1 and 13
 function getRandomCard(){
