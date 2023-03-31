@@ -5,20 +5,19 @@ let messagePrompt = document.getElementById("message-prompt");
 let sum = document.querySelector(".sum-cards");
 let card = document.querySelector("#cards");
 
-let firstCard = getRandomCard();
-let secondCard = getRandomCard();
-let cards = [firstCard, secondCard]; //array - ordered list of items
+
+let cards = []; //array - ordered list of items
 // Sum up the two cards
-let sumCard = firstCard + secondCard;
+let sumCard = 0;
 
 //check if blackJack condition was met
 let hasBlackJack = false;
 
 // check if we are still in the game
-let isAlive = true;
+let isAlive = false;
 
 // A varaible called message and assign a string value to it
-let message = "We're logging out";
+let message = "";
 
 // function to get random number between 1 and 13
 function getRandomCard(){
@@ -33,7 +32,13 @@ function getRandomCard(){
 }
 
 function startGame(){
-    renderGame();
+  isAlive = true;
+  let firstCard = getRandomCard();
+  let secondCard = getRandomCard();
+  cards = [firstCard, secondCard];
+  sumCard = firstCard + secondCard;
+  
+  renderGame();
 }
 
 function renderGame() {
