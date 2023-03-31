@@ -66,9 +66,11 @@ function renderGame() {
 }
 
 function newCard(){
+  // allow player to pick new card if it is alive and does not have blackjack
+  if(isAlive === true && hasBlackJack === false){
     let newCard = getRandomCard();
     cards.push(newCard);
-
     sumCard += newCard
     renderGame();
-}
+  }
+}    

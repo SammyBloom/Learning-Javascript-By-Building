@@ -34,8 +34,31 @@
 // let sumRaceTime = getTotalRaceTime()
 // console.log(sumRaceTime);
 
-function rollDice(){
-    return Math.floor(Math.random() * 6) + 1;
-}
+// function rollDice(){
+//     return Math.floor(Math.random() * 6) + 1;
+// }
+// console.log(rollDice());
 
-console.log(rollDice());
+
+// let hasSolvedChallenge = false;
+// let hasHintsLeft = false;
+
+// // An if sttatement that checks that both variable are false
+// // If so, run the showSolution() function
+// if (hasSolvedChallenge === false && hasHintsLeft === false){
+//     showSolution();
+// }
+
+// function showSolution(){
+//     console.log("Showing the solution...");
+// }
+
+
+let likesDocumentaries = true;
+let likeStartups = false;
+if (likesDocumentaries === true || likeStartups === false){
+    recommendMovie();
+}
+function recommendMovie(){
+    console.log("Hey, check out this new movie...");
+}
