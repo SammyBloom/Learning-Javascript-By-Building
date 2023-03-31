@@ -19,6 +19,14 @@ let isAlive = false;
 // A varaible called message and assign a string value to it
 let message = "";
 
+let player = {
+  name:"Sammy",
+  chips: 145
+}
+
+let playerName = document.getElementById("player_name");
+playerName.textContent = player.name + ": " + player.chips;
+
 // function to get random number between 1 and 13
 function getRandomCard(){
   let randomNumber = Math.floor(Math.random() * 13) + 1;
